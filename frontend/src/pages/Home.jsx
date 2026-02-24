@@ -50,11 +50,6 @@ export default function Home() {
           <li>We will contact you to organize delivery.</li>
         </ol>
       </section>
-
-      <section className="mt-12">
-        <h3 className="font-serif text-xl text-wine">Newsletter</h3>
-        <p className="text-gray-700 mt-2">Sign up for updates (placeholder)</p>
-      </section>
     </div>
   )
 }
