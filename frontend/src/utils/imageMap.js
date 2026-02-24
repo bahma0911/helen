@@ -1,6 +1,8 @@
 // Utility to resolve image paths stored in the DB to Vite-imported URLs.
 // It uses Vite's import.meta.glob to build a map of available images.
-const modules = import.meta.glob('../image/*.{png,jpg,jpeg,svg}', { eager: true, as: 'url' })
+// Images are stored in `frontend/image` (sibling to `src`), so glob from here
+// must go up two levels to reach that folder from `src/utils`.
+const modules = import.meta.glob('../../image/*.{png,jpg,jpeg,svg}', { eager: true, as: 'url' })
 
 const map = {}
 for (const key in modules) {
@@ -11,6 +13,7 @@ for (const key in modules) {
   map['/image/' + filename] = modules[key]
   map['../image/' + filename] = modules[key]
   map['../../image/' + filename] = modules[key]
+  map['../../../image/' + filename] = modules[key]
 }
 
 export function resolveImage(value) {
