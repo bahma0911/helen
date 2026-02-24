@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { getWine } from '../services/api'
 import { useOrderDispatch } from '../context/OrderContext'
+import { resolveImage } from '../utils/imageMap'
 
 export default function WineDetails() {
   const { id } = useParams()
@@ -39,7 +40,7 @@ export default function WineDetails() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <div className="w-full h-96 bg-gray-50 flex items-center justify-center rounded">
-          <img src={wine.imageUrl} alt={wine.name} className="max-h-full max-w-full object-contain" />
+          <img src={resolveImage(wine.imageUrl) || wine.imageUrl} alt={wine.name} className="max-h-full max-w-full object-contain" />
         </div>
       </div>
       <div>

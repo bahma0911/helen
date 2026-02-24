@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useOrderDispatch } from '../context/OrderContext'
+import { resolveImage } from '../utils/imageMap'
 
 /*
   Props:
@@ -18,7 +19,7 @@ export default function WineCard({ wine }) {
       <Link to={`/wine/${wine._id || wine.id}`} className="block">
         <div className="w-full h-44 bg-gray-50 flex items-center justify-center">
           <img
-            src={wine.imageUrl}
+            src={resolveImage(wine.imageUrl) || wine.imageUrl}
             alt={wine.name}
             className="max-h-full max-w-full object-contain"
             draggable={false}

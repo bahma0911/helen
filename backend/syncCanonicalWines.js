@@ -6,7 +6,7 @@ dotenv.config();
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/Wine';
 
 const canonical = [
-  { id: 1, brand: 'Acacia', name: 'Acacia Medium Sweet Red', type: 'Red', tastingNotes: 'Red fruit, gentle spice.', price: 600, imageUrl: 'image/Acacia-Medium-Sweet-Red.png' },
+  { id: 1, brand: 'Acacia', name: 'Acacia Medium Sweet Red', type: 'Red', tastingNotes: 'Red fruit, gentle spice.', price: 600, imageUrl: '../../image/Acacia-Medium-Sweet-Red.png' },
   { id: 2, brand: 'Acacia', name: 'Acacia Medium Sweet White', type: 'White', tastingNotes: 'Citrus and floral notes.', price: 600, imageUrl: '../../image/Acacia-Medium-Sweet-White.png' },
   { id: 3, brand: 'Acacia', name: 'Acacia Medium Sweet Rose', type: 'Rose', tastingNotes: 'Strawberry and rose.', price: 600, imageUrl: '../../image/Acacia-Medium-Sweet-Rose.png' },
   { id: 4, brand: 'Rift Valley', name: 'Rift Valley Cabernet Sauvignon', type: 'Red', tastingNotes: 'Blackcurrant and oak.', price: 650, imageUrl: '../../image/Rift-Valley-Cabernet-Sauvignon.png' },
