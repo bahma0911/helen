@@ -8,7 +8,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import WhatsAppFloatingButton from './components/WhatsAppFloatingButton'
+// WhatsApp floating button removed
 import BackgroundBottle from './components/BackgroundBottle'
 
 export default function App() {
@@ -27,7 +27,6 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      <WhatsAppFloatingButton />
     </div>
   )
 }
